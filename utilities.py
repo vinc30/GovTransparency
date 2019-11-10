@@ -3,6 +3,10 @@
 import pdfminer
 import pandas as pd
 
+from pdfminer.pdfparser import PDFParser, PDFDocument
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.converter import PDFPageAggregator
+from pdfminer.layout import LAParams, LTTextBox, LTTextLine
 
 def extract_text_from_pdf(path):
     '''
